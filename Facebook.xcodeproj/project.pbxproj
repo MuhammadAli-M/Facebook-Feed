@@ -8,12 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		347EDE7C24479D4C003E7241 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347EDE7B24479D4C003E7241 /* AppDelegate.swift */; };
-		347EDE7E24479D4C003E7241 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347EDE7D24479D4C003E7241 /* SceneDelegate.swift */; };
-		347EDE8024479D4C003E7241 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347EDE7F24479D4C003E7241 /* ViewController.swift */; };
-		347EDE8324479D4C003E7241 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 347EDE8124479D4C003E7241 /* Main.storyboard */; };
+		347EDE8024479D4C003E7241 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347EDE7F24479D4C003E7241 /* FeedViewController.swift */; };
 		347EDE8524479D4F003E7241 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 347EDE8424479D4F003E7241 /* Assets.xcassets */; };
 		347EDE8824479D4F003E7241 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 347EDE8624479D4F003E7241 /* LaunchScreen.storyboard */; };
 		347EDE9324479D4F003E7241 /* FacebookTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347EDE9224479D4F003E7241 /* FacebookTests.swift */; };
+		34A9AD1D244AE95E0058C68D /* ColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A9AD1C244AE95E0058C68D /* ColorExtensions.swift */; };
+		34A9AD1F244B1DCB0058C68D /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A9AD1E244B1DCB0058C68D /* FeedCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,15 +29,15 @@
 /* Begin PBXFileReference section */
 		347EDE7824479D4C003E7241 /* Facebook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Facebook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		347EDE7B24479D4C003E7241 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		347EDE7D24479D4C003E7241 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		347EDE7F24479D4C003E7241 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		347EDE8224479D4C003E7241 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		347EDE7F24479D4C003E7241 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		347EDE8424479D4F003E7241 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		347EDE8724479D4F003E7241 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		347EDE8924479D4F003E7241 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		347EDE8E24479D4F003E7241 /* FacebookTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FacebookTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		347EDE9224479D4F003E7241 /* FacebookTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookTests.swift; sourceTree = "<group>"; };
 		347EDE9424479D4F003E7241 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		34A9AD1C244AE95E0058C68D /* ColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtensions.swift; sourceTree = "<group>"; };
+		34A9AD1E244B1DCB0058C68D /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,9 +80,9 @@
 			isa = PBXGroup;
 			children = (
 				347EDE7B24479D4C003E7241 /* AppDelegate.swift */,
-				347EDE7D24479D4C003E7241 /* SceneDelegate.swift */,
-				347EDE7F24479D4C003E7241 /* ViewController.swift */,
-				347EDE8124479D4C003E7241 /* Main.storyboard */,
+				347EDE7F24479D4C003E7241 /* FeedViewController.swift */,
+				34A9AD1E244B1DCB0058C68D /* FeedCell.swift */,
+				34A9AD1C244AE95E0058C68D /* ColorExtensions.swift */,
 				347EDE8424479D4F003E7241 /* Assets.xcassets */,
 				347EDE8624479D4F003E7241 /* LaunchScreen.storyboard */,
 				347EDE8924479D4F003E7241 /* Info.plist */,
@@ -182,7 +182,6 @@
 			files = (
 				347EDE8824479D4F003E7241 /* LaunchScreen.storyboard in Resources */,
 				347EDE8524479D4F003E7241 /* Assets.xcassets in Resources */,
-				347EDE8324479D4C003E7241 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -200,9 +199,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				347EDE8024479D4C003E7241 /* ViewController.swift in Sources */,
+				347EDE8024479D4C003E7241 /* FeedViewController.swift in Sources */,
+				34A9AD1F244B1DCB0058C68D /* FeedCell.swift in Sources */,
 				347EDE7C24479D4C003E7241 /* AppDelegate.swift in Sources */,
-				347EDE7E24479D4C003E7241 /* SceneDelegate.swift in Sources */,
+				34A9AD1D244AE95E0058C68D /* ColorExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -225,14 +225,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		347EDE8124479D4C003E7241 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				347EDE8224479D4C003E7241 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		347EDE8624479D4F003E7241 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

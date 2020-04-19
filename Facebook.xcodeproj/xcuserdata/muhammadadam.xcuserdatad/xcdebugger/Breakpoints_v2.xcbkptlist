@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "C487329D-194F-4301-B101-88E091FA4546"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1ED61A9D-E72E-4C91-A037-D4E6A4418349"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FeedCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "224"
+            endingLineNumber = "224"
+            landmarkName = "textViewDidChange(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B3A042E3-9A6D-4F9B-BF27-CF4A96B703A7"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FeedCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
+            landmarkName = "FeedCell"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "B3A042E3-9A6D-4F9B-BF27-CF4A96B703A7 - d10de5054aa03d4b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Facebook.FeedCell.postTextView.getter : __C.UITextView"
+                  moduleName = "Facebook"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/muhammadadam/Desktop/Facebook/FeedCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "58"
+                  endingLineNumber = "58"
+                  offsetFromSymbolStart = "370">
+               </Location>
+               <Location
+                  uuid = "B3A042E3-9A6D-4F9B-BF27-CF4A96B703A7 - 1e0becfd0242a117"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; __C.UITextView in Facebook.FeedCell.postTextView.getter : __C.UITextView"
+                  moduleName = "Facebook"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/muhammadadam/Desktop/Facebook/FeedCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "59"
+                  endingLineNumber = "59"
+                  offsetFromSymbolStart = "17">
+               </Location>
+               <Location
+                  uuid = "B3A042E3-9A6D-4F9B-BF27-CF4A96B703A7 - ab8c217888fd055f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Facebook.FeedCell.postTextView.setter : __C.UITextView"
+                  moduleName = "Facebook"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/muhammadadam/Desktop/Facebook/FeedCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "58"
+                  endingLineNumber = "58"
+                  offsetFromSymbolStart = "160">
+               </Location>
+               <Location
+                  uuid = "B3A042E3-9A6D-4F9B-BF27-CF4A96B703A7 - c5244abbbda4f4e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Facebook.FeedCell.postTextView.modify : __C.UITextView"
+                  moduleName = "Facebook"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/muhammadadam/Desktop/Facebook/FeedCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "26">
+               </Location>
+               <Location
+                  uuid = "B3A042E3-9A6D-4F9B-BF27-CF4A96B703A7 - 67dedf3b9d66f15f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Facebook.FeedCell.postTextView.modify : __C.UITextView with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "Facebook"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/muhammadadam/Desktop/Facebook/FeedCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "58"
+                  endingLineNumber = "58"
+                  offsetFromSymbolStart = "27">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "38472962-E4CF-4E8B-8437-9078C1C6DC15"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Facebook/FeedViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "74"
+            endingLineNumber = "74"
+            landmarkName = "FeedViewController"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6E480224-8EF9-4CD1-AFDB-26DE01B53A2A"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Facebook/FeedViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
+            landmarkName = "collectionView(_:cellForItemAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
