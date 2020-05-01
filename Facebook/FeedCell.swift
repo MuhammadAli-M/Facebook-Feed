@@ -8,14 +8,32 @@
 
 import UIKit
 
-class FeedCell: UICollectionViewCell {
+class FeedCell: UITableViewCell {
     
-    func configure(posterName: String, posterImage: String, postText: String, postImage: String){
-        configureNameLabelText(title: posterName)
-        postTextView.text = postText
-        textViewDidChange(postTextView)
-        userImageView.image = UIImage(named: posterImage)
-        statusImageView.image = UIImage(named: postImage)
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?){
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
+        backgroundColor = .white
+        self.selectionStyle = .none
+        setupViews()
+    }
+
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    public var post: Post?{
+        didSet{
+            configureNameLabelText(title: post?.userName ?? "")
+             postTextView.text = post?.postText
+             userImageView.image = UIImage(named: post?.userImage ?? "")
+            if let image = UIImage(named: post?.postImageName ?? ""){
+                statusImageView.image = image
+                statusImageViewHeightConstraint.constant = 200
+            }else{
+                statusImageViewHeightConstraint.constant = 0
+            }
+        }
     }
     
     func configureNameLabelText(title: String, subtitle: String? = nil){
@@ -54,18 +72,26 @@ class FeedCell: UICollectionViewCell {
         return imageView
     }()
     
-//    lazy var postTextViewHeightConstraint = postTextView.heightAnchor.constraint(equalToConstant: 0.0)
-    lazy var postTextView: UITextView = {
+    private lazy var statusImageViewHeightConstraint = NSLayoutConstraint(item: statusImageView,
+                                                                     attribute: .height,
+                                                                     relatedBy: .equal,
+                                                                     toItem: nil,
+                                                                     attribute: .notAnAttribute,
+                                                                     multiplier: 1,
+                                                                     constant: 200)
+    
+    private lazy var postTextView: UITextView = {
        let txtView = UITextView()
         txtView.isScrollEnabled = false
         txtView.isUserInteractionEnabled = false
+        txtView.font = UIFont.systemFont(ofSize: 14, weight: .semibold)
         txtView.translatesAutoresizingMaskIntoConstraints = false
         return txtView
     }()
 
-    var statusImageView: UIImageView = {
+    private var statusImageView: UIImageView = {
        let imageView = UIImageView()
-        imageView.contentMode = .scaleAspectFill
+        imageView.contentMode = .scaleToFill
         imageView.backgroundColor = .purple
         imageView.layer.masksToBounds = true
         imageView.translatesAutoresizingMaskIntoConstraints = false
@@ -73,7 +99,7 @@ class FeedCell: UICollectionViewCell {
         }()
 
     
-    lazy var likesAndCommentsLabels: UILabel = {
+    private lazy var likesAndCommentsLabels: UILabel = {
        let label = UILabel()
         let attributedString = NSMutableAttributedString(string: "131 Likes  390 Comments", attributes: [
             NSAttributedString.Key.foregroundColor : UIColor.lightGray,
@@ -84,18 +110,18 @@ class FeedCell: UICollectionViewCell {
         return label
     }()
     
-    lazy var lineView: UIView = {
+    private lazy var lineView: UIView = {
         let view = UIView()
         view.backgroundColor = .lightGray
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
     
-    lazy var likeButton = FeedCell.getButtonForTitle("Like", imageName: "like")
-    lazy var commentButton = FeedCell.getButtonForTitle("Comment", imageName: "comment")
-    lazy var shareButton = FeedCell.getButtonForTitle("Share", imageName: "share")
-    
-    func getCenters(totalWidth: Float, numberOfItems:Int, spacing: Float) -> (Float, [Float]){
+    private lazy var likeButton = FeedCell.getButtonForTitle("Like", imageName: "like")
+    private lazy var commentButton = FeedCell.getButtonForTitle("Comment", imageName: "comment")
+    private lazy var shareButton = FeedCell.getButtonForTitle("Share", imageName: "share")
+
+    private func getCenters(totalWidth: Float, numberOfItems:Int, spacing: Float) -> (Float, [Float]){
         let floatNumberOfItems = Float(numberOfItems)
         let widthOfEach = (totalWidth - (floatNumberOfItems - 1) * spacing) / floatNumberOfItems
 
@@ -108,7 +134,7 @@ class FeedCell: UICollectionViewCell {
         return (widthOfEach, centers)
     }
 
-    static func getButtonForTitle(_ title: String, imageName: String) -> UIButton{
+    static private func getButtonForTitle(_ title: String, imageName: String) -> UIButton{
         let button = UIButton()
         button.setTitle(title, for: .normal)
         button.setImage(UIImage(named: imageName), for: .normal)
@@ -118,18 +144,8 @@ class FeedCell: UICollectionViewCell {
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        backgroundColor = .white
-        setupViews()
-//        postTextViewHeightConstraint.priority = UILayoutPriority(rawValue: 999)
-    }
     
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
-    func setupViews(){
+    private func setupViews(){
         
         [userImageView,
          nameLabel,
@@ -156,13 +172,11 @@ class FeedCell: UICollectionViewCell {
             nameLabel.bottomAnchor.constraint(equalTo: userImageView.bottomAnchor),
         ])
         
-//        let height = postTextView.sizeThatFits(CGSize(width:frame.size.width, height: .greatestFiniteMagnitude)).height
         NSLayoutConstraint.activate([
             postTextView.leadingAnchor.constraint(equalTo: userImageView.leadingAnchor),
             postTextView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -8),
             postTextView.topAnchor.constraint(equalTo: userImageView.bottomAnchor, constant: 8),
             postTextView.heightAnchor.constraint(greaterThanOrEqualToConstant: 30)
-//            postTextViewHeightConstraint
         ])
 
         
@@ -170,7 +184,7 @@ class FeedCell: UICollectionViewCell {
             statusImageView.leadingAnchor.constraint(equalTo: leadingAnchor),
             statusImageView.trailingAnchor.constraint(equalTo: trailingAnchor),
             statusImageView.topAnchor.constraint(equalTo: postTextView.bottomAnchor, constant: 8),
-            statusImageView.heightAnchor.constraint(equalToConstant: 200)
+            statusImageViewHeightConstraint
         ])
         
         NSLayoutConstraint.activate([
@@ -210,19 +224,11 @@ class FeedCell: UICollectionViewCell {
             
         }
         
-        // It's possible to use UIStackView and get out of this hassle but I just want to  try it out.
+        // It's possible to use UIStackView and get rid of this hassle but I just want to try it out.
+        NSLayoutConstraint.activate([
+            likeButton.bottomAnchor.constraint(equalTo: layoutMarginsGuide.bottomAnchor, constant: -4),
+        ])
 
     }
     
-}
-
-
-
-extension FeedCell: UITextViewDelegate{
-    func textViewDidChange(_ textView: UITextView) {
-
-//        let height = postTextView.sizeThatFits(CGSize(width:frame.size.width, height: .greatestFiniteMagnitude)).height
-//        postTextViewHeightConstraint.constant = height
-
-    }
 }

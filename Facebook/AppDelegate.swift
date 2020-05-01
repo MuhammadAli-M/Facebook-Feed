@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.makeKeyAndVisible()
-        let viewcontroller = FeedViewController(collectionViewLayout: UICollectionViewFlowLayout())
+        let viewcontroller = FeedViewController()
         let navigationController = UINavigationController(rootViewController: viewcontroller)
         window?.rootViewController = navigationController
         return true
