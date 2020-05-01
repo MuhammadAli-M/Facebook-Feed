@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		347D0380245C7D670042C2A9 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347D037F245C7D670042C2A9 /* Post.swift */; };
 		347EDE7C24479D4C003E7241 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347EDE7B24479D4C003E7241 /* AppDelegate.swift */; };
 		347EDE8024479D4C003E7241 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347EDE7F24479D4C003E7241 /* FeedViewController.swift */; };
 		347EDE8524479D4F003E7241 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 347EDE8424479D4F003E7241 /* Assets.xcassets */; };
@@ -27,6 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		347D037F245C7D670042C2A9 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		347EDE7824479D4C003E7241 /* Facebook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Facebook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		347EDE7B24479D4C003E7241 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		347EDE7F24479D4C003E7241 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
@@ -82,6 +84,7 @@
 				347EDE7B24479D4C003E7241 /* AppDelegate.swift */,
 				347EDE7F24479D4C003E7241 /* FeedViewController.swift */,
 				34A9AD1E244B1DCB0058C68D /* FeedCell.swift */,
+				347D037F245C7D670042C2A9 /* Post.swift */,
 				34A9AD1C244AE95E0058C68D /* ColorExtensions.swift */,
 				347EDE8424479D4F003E7241 /* Assets.xcassets */,
 				347EDE8624479D4F003E7241 /* LaunchScreen.storyboard */,
@@ -203,6 +206,7 @@
 				34A9AD1F244B1DCB0058C68D /* FeedCell.swift in Sources */,
 				347EDE7C24479D4C003E7241 /* AppDelegate.swift in Sources */,
 				34A9AD1D244AE95E0058C68D /* ColorExtensions.swift in Sources */,
+				347D0380245C7D670042C2A9 /* Post.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

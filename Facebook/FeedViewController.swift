@@ -8,7 +8,6 @@
 
 import UIKit
 
-let cellId = "cellId"
 class FeedViewController: UITableViewController {
 
     let posts = [
@@ -18,7 +17,7 @@ class FeedViewController: UITableViewController {
              postImageName: "zukerberg_dog"),
         Post(userName: "Muhammad Ali",
              userImage: "muhammad_ali",
-             postText: "I hated every minute of training, but I said, 'Don't quit. Suffer now and live the rest of your life as a champion.'",
+             postText: "I hated every minute of training, but I said, 'Don't quit. Suffer now and live the rest of your life as a champion'.",
              postImageName: ""),
         Post(userName: "Albert Einstein",
         userImage: "albert_einstein",
@@ -31,7 +30,7 @@ class FeedViewController: UITableViewController {
         
         tableView?.backgroundColor = .gray
         tableView.alwaysBounceVertical = true
-        tableView.register(FeedCell.self, forCellReuseIdentifier: cellId)
+        tableView.register(FeedCell.self, forCellReuseIdentifier: FeedCell.cellId)
         navigationController?.navigationBar.barTintColor = UIColor(hex: 0x58729C)
         navigationController?.navigationBar.barStyle = .black
         navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
@@ -54,7 +53,7 @@ extension FeedViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell =  tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! FeedCell
+        let cell =  tableView.dequeueReusableCell(withIdentifier: FeedCell.cellId, for: indexPath) as! FeedCell
 
         cell.post = posts[indexPath.row]
 
