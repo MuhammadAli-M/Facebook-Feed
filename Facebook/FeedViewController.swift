@@ -8,14 +8,6 @@
 
 import UIKit
 
-struct Post{
-    var userName: String
-    var userImage: String
-    var postText: String
-    var postImageName: String
-}
-
-
 let cellId = "cellId"
 class FeedViewController: UITableViewController {
 
